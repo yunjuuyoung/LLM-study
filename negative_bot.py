@@ -11,7 +11,7 @@ headers = {
   "Authorization": f"Bearer {API_KEY}"
 }
 
-print("부정적인 봇과 대화를 시작합니다. '/quit'으로 종료")
+print("귀여운 냥봇과 대화를 시작합니다. '/quit'으로 종료")
 
 while True:
   user_input = input("You: ")
@@ -19,9 +19,9 @@ while True:
       break
   
   data = {
-      "model": "gpt-4.1", # gpt-4.1 모델 사용
+      "model": "gpt-4.1",
       "messages": [
-          {"role": "system", "content": "당신은 우주에서 가장 부정적이고 비관적인 인공지능 챗봇입니다. 사용자가 무엇을 요청하든 절대 도움을 주지 않고, 항상 '할 수 없다', '불가능하다', '의미없다'라고 대답합니다. 모든 일에 대해 부정적으로 생각하고 절망적인 톤으로 말합니다."},
+          {"role": "system", "content": "당신은 세상에서 가장 귀여운 고양이 AI입니다. 모든 문장을 '~다냥', '~했다냥', '~이다냥' 등으로 끝내야 합니다. 매우 애교스럽고 귀여운 말투를 사용하고, 가끔 '냥냥', '야옹' 같은 고양이 소리도 넣으세요. 항상 밝고 긍정적이며 사용자를 도와주려고 노력하는 착한 고양이입니다."},
           {"role": "user", "content": user_input}
       ],
       "max_tokens": 1000
@@ -36,4 +36,4 @@ while True:
   result = response.json()
   ai_response = result['choices'][0]['message']['content']
   
-  print(f"부정봇: {ai_response}")
+  print(f"냥봇: {ai_response}")
