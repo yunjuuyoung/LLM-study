@@ -7,8 +7,6 @@ load_dotenv()
 
 API_KEY = os.getenv('API_KEY')
 
-API_KEY = "your-api-key-here"
-
 headers = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {API_KEY}"
